@@ -2,7 +2,7 @@ import random
 import json
 import asyncio
 
-MOVIES_FILE = 'hmovies.json'
+MOVIES_FILE = 'data/hmovies.json'
 HOLLYWOOD = "HOLLYWOOD"
 
 # Load movie data from JSON file
@@ -68,7 +68,7 @@ async def setup_hollywood_game(client, message):
                 else:
                     guess = response.content.upper()
 
-                    if len(guess) == 1 and (guess.isalpha() or guess.isdigit()):  # Allow alphabetic and numeric guesses
+                    if len(guess) == 1:  
                         if guess in guesses:
                             await message.channel.send(f"You've already guessed '{guess}'. Guess another letter or number.")
                         else:

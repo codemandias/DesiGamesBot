@@ -2,7 +2,7 @@ import random
 import json
 import asyncio
 
-MOVIES_FILE = 'movies.json'
+MOVIES_FILE = 'data/movies.json'
 BOLLYWOOD = "BOLLYWOOD"
 
 # Load movie data from JSON file
